@@ -4,11 +4,13 @@ def constant_function():
 	print('CONSTANT FUNCTION:')
 	l = []
 	l.append(1)
-	print(len(l))   # 1
+	l1 = len(l)
+	print(l1)   # 1
 
 	l = list(range(1000))
 	l.append(1)
-	print(len(l))   # 1000
+	l2 = len(l)
+	print(l2)   # 1000
 
 def logarithmic_function():
 	print('LOGARITHMIC FUNCTION:')
@@ -29,9 +31,11 @@ def logarithmic_function():
 		return found
 
 	input = [0, 1, 2, 8, 13, 17, 19, 32, 42,]
-
-	print(binary_search(input, 3))   # found: False
-	print(binary_search(input, 13))  # fount: True
+	
+	b1 = binary_search(input, 3)
+	b2 = binary_search(input, 13)
+	print('The number 3 was found? ', b1)   # found: False
+	print('The number 13 was found? ', b2)  # fount: True
 
 def square_root_function():
 	print('SQUARE ROOT FUNCTION:')
@@ -45,8 +49,10 @@ def square_root_function():
 					return False
 		return True
 
-	print(is_prime_number(23))
-	print(is_prime_number(1376187))
+	p1 = is_prime_number(23)
+	p2 = is_prime_number(1376187)
+	print(p1)
+	print(p2)
 
 def linear_function():
 	print('LINEAR FUNCTION:')
@@ -77,19 +83,22 @@ def linearithmic_function():
 
 
 	input = [10, 5, 2, 3, 7, 0, 9, 12]
-	print("sorted:  ", quicksort(input))
+	s = quicksort(input)
+	print("sorted:  ", s)
 
 def quadratic_function():
 	print('QUADRATIC FUNCTION:')
-	def power(input):
+	def power(input):    # n^n
 		p = 0
 		for i in range(input):
 			for j in range(input):
 				p += input
 		return p
-
-	print(power(3))
-	print(power(4))
+	
+	p1 = power(3)
+	p2 = power(4)
+	print(p1)
+	print(p2)
 
 def exponential_function():
 	print('EXPONENTIAL FUNCTION:')
@@ -98,9 +107,11 @@ def exponential_function():
 			return num
 		return fibonacci(num - 2) + fibonacci(num - 1)
 	
-	print(fibonacci(10))
-	breakout()
-	print(fibonacci(20))
+	f1 = fibonacci(10)
+	f2 = fibonacci(20)
+
+	print(f1)
+	print(f2)
 
 def factorial_function():
 	print('FACTORIAL FUNCTION:')
@@ -109,10 +120,14 @@ def factorial_function():
 			return n * factorial(n-1)
 		else:
 			return n
+
+	fac1 = factorial(3)
+	fac2 = factorial(4)
+	fac3 = factorial(5)
 	
-	print(factorial(3))
-	print(factorial(4))
-	print(factorial(5))
+	print(fac1)
+	print(fac2)
+	print(fac3)
 
 if __name__ == '__main__':
 	constant_function()
