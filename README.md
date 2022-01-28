@@ -32,10 +32,11 @@ echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
 > curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 2. Export to the Path variables:
 > echo 'export PATH="$PATH:$HOME/.poetry/bin"' >> ~/.bashrc
-3. Configure poetry:
-> poetry config virtualenvs.in-project true
-4. Reload bash:
+3. Reload bash:
 > source ~/.bashrc
+4. Configure poetry:
+> poetry config virtualenvs.in-project true
+
 
 ## Pyenv + Poetry Usage
 1. First list the python versions available for Pyenv with the following command:
