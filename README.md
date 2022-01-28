@@ -46,7 +46,7 @@ echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
 > pyenv global 3.8.5
 4. Make a directory, enter inside and set pyenv locally:
 > mkdir new_project && cd new_project & pyenv local 3.8.5
-5. Initialize a new poetry project (Choose Python 3.8):
+5. Initialize a new poetry project:
 > poetry init
 6. Open the pyproject.toml file and overwrite the following line:
 ```
@@ -59,3 +59,15 @@ python = "^3.8"
 > poetry install
 9. Use poetry shell:
 > poetry shell
+
+## PDB commands
+```
+h: help
+w: where
+n: next
+s: step (steps into function)
+c: continue
+p: print
+l: list
+q: quit
+```
