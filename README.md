@@ -71,3 +71,6 @@ p: print
 l: list
 q: quit
 ```
+
+## Profiling library
+> import cProfile, pstats
