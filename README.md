@@ -19,11 +19,11 @@ In this session will be configure a Python environment using Poetry and Pyenv in
 2. Download and install Pyenv:
 > curl https://pyenv.run | bash
 3. Export to the Path variables:
-'''
+```
 echo 'export PATH="$PATH:$HOME/.pyenv/bin"' >> ~/.bashrc && \
 echo 'eval "$(pyenv init -)"' >> ~/.bashrc && \
 echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
-'''
+```
 4. Reload bash:
 > source ~/.bashrc
 
@@ -36,3 +36,26 @@ echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
 > echo 'export PATH="$PATH:$HOME/.poetry/bin"' >> ~/.bashrc
 4. Reload bash:
 > source ~/.bashrc
+
+## Pyenv + Poetry Usage
+1. First list the python versions available for Pyenv with the following command:
+> pyenv install --list | grep " 3\.[8]"
+2. Then install it, in my case I chose the 3.8.5 version:
+> pyenv install 3.8.5
+3. Set globally:
+> pyenv global 3.8.5
+4. Make a directory, enter inside and set pyenv locally:
+> mkdir new_project && cd new_project & pyenv local 3.8.5
+5. Initialize a new poetry project (Choose Python 3.8):
+> poetry init
+6. Open the pyproject.toml file and overwrite the following line:
+```
+[tool.poetry.dependencies]
+python = "^3.8"
+```
+7. Use the pyenv environment with Poetry:
+> poetry env use 3.8.5
+8. Install the dependencies:
+> poetry install
+9. Use poetry shell:
+> poetry shell
