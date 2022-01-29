@@ -38,7 +38,7 @@ ALL_HANDLERS = {
 def make_handler(version):
 	handler: Handler
 	try:
-		handler = next(filter(lambda P: P.version == version, Handler.__subclasses__()))()
+		handler = next(filter(lambda P: P.version == version, Handler.__subclasses__() )) ()
 	except StopIteration as err:
 		raise NotImplementedError from err
 	return handler

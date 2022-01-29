@@ -10,7 +10,6 @@ class NewFileHandler:
 	def download(self, path):
 		print(f'The file will download to the following path: {path} with the quickest way')
 
-
 	def upload(self, data, path):
 		print(f'The file will upload to the following path: {path}'+ 
 		f'\nWith the data: {data} with the quickest way')

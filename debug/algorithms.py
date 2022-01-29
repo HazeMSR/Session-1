@@ -122,7 +122,10 @@ def factorial_function():
 			return n
 
 	fac1 = factorial(3)
-	fac2 = factorial(4)
+	l = [ {'key1':1, 'key2':'2',3:'key3'}]
+	breakpoint()
+	fac2 = factorial(1000)
+	
 	fac3 = factorial(5)
 	
 	print(fac1)
@@ -134,7 +137,7 @@ if __name__ == '__main__':
 	logarithmic_function()
 	square_root_function()
 	linear_function()
-	linearithmic_function()
-	quadratic_function()
+	linearithmic_function() # n log n
+	quadratic_function() 
 	exponential_function()
 	factorial_function()

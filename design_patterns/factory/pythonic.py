@@ -2,9 +2,11 @@ from typing import Protocol
 from abc import abstractmethod
 
 class Handler(Protocol):
+	@abstractmethod
 	def download(self, path: str) -> bytes:
 		raise NotImplementedError
 
+	@abstractmethod
 	def upload(self, data: bytes, path: str):
 		raise NotImplementedError
 
@@ -27,11 +29,12 @@ class NewFileHandler(Handler):
 		f'\nWith the data: {data} with the quickest way')
 
 ALL_HANDLERS = {
-  "old": FileHandler,
-  "new": NewFileHandler,
+  'old': FileHandler,
+  'new': NewFileHandler,
 }
 
 def make_handler(version):
+	handler: Handler
 	try:
 		handler = ALL_HANDLERS[version]()
 	except KeyError as err:

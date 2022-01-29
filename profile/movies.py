@@ -24,22 +24,31 @@ def read_movies(src):
 	with open(src) as fd:
 		return fd.read().splitlines()
 
-def is_duplicate(movie, movies):
-	
-	for m in movies:
-		if movie.lower() == m.lower():
-			return True
-	return False
-
+@profile
 def find_duplicate_movies(src='movies.txt'):
 
 	movies = read_movies(src)
-	duplicates = []
-	while movies:
-		movie = movies.pop()
-		if is_duplicate(movie, movies):
-			duplicates.append(movie)
+	movies = [ movie.lower() for movie in movies ]
+
+	movies.sort()
+	# antz, alice in bordelands, animal planet, animal planet
+
+	# antz, alice
+	# alice, animal
+	# animal, animal
+	duplicates = [movie1 for movie1, movie2 in zip(movies[:-1], movies[1:]) if movie1 == movie2]
 	return duplicates
 
 if __name__ == '__main__':
+	l1 = [1,2,3]
+	l2 = ['uno','dos','tres']
+
+	# 1 2
+	# 2 3
+	# 3 4
+	# 4 5
+	
+	print(set(zip(l1, l2, l3)))
+	print(l1[2:])
+	
 	find_duplicate_movies()

@@ -20,7 +20,7 @@ class FileHandler:
 class NewFileHandler:
 	def download(self, path):
 		print(f'The file will download to the following path: {path} with the quickest way')
-		return bytes('Some quickest random bytes','utf-8')
+		return bytes('Some random bytes','utf-8')
 
 	def upload(self, data, path):
 		print(f'The file will upload to the following path: {path}'+ 
