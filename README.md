@@ -42,7 +42,7 @@ echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
 1. First list the python versions available for Pyenv with the following command:
 > pyenv install --list | grep " 3\.[8]"
 2. Then install it, in my case I chose the 3.8.5 version:
-> pyenv install 3.8.5
+> pyenv install -v 3.8.5
 3. Set globally:
 > pyenv global 3.8.5
 4. Make a directory, enter inside and set pyenv locally:
